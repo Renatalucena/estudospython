@@ -1,0 +1,105 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPkGIYkziJO9G94H9kPn/gX",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Renatalucena/estudospython/blob/main/calc\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BWh4yrWND-3L",
+        "outputId": "bc2d0db5-0a55-4271-cb55-1a30ff121370"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escolha a operação você deseja realizar:\n",
+            "________________________________________\n",
+            "digite 1 para adição\n",
+            "digite 2 para subtração\n",
+            "digite 3 para multiplicação\n",
+            "digite 4 para divisão\n",
+            "________________________________________\n",
+            " start 4\n",
+            " primeiro numero:  6\n",
+            "insira o segundo número:  7\n",
+            "o resultado é 0.8571428571428571\n",
+            "se desejar parar, digite [0] para continuar digite [1]1\n",
+            "Escolha a operação você deseja realizar:\n",
+            "________________________________________\n",
+            "digite 1 para adição\n",
+            "digite 2 para subtração\n",
+            "digite 3 para multiplicação\n",
+            "digite 4 para divisão\n",
+            "________________________________________\n"
+          ]
+        }
+      ],
+      "source": [
+        "def calc(a, b, op):\n",
+        "  if (op == 1):\n",
+        "    res = a + b\n",
+        "  elif (op == 2):\n",
+        "    res = a - b\n",
+        "  elif (op == 3):\n",
+        "    res = a * b\n",
+        "  elif(op == 4):\n",
+        "    res = a/ b\n",
+        "  else:\n",
+        "    res = 0    \n",
+        "  return res\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "n = 1\n",
+        "while n != 0:\n",
+        "  print('Escolha a operação você deseja realizar:')\n",
+        "  print('_____'*8)\n",
+        "  print(f'digite 1 para adição')\n",
+        "  print(f'digite 2 para subtração')\n",
+        "  print(f'digite 3 para multiplicação')\n",
+        "  print(f'digite 4 para divisão')\n",
+        "  print('_____'*8)\n",
+        "  op = int (input(f' start '))\n",
+        "  if op > 4:\n",
+        "    print('opcão inválida')\n",
+        "    break\n",
+        "  a = int (input(' primeiro numero:  '))\n",
+        "  b = int (input('insira o segundo número:  '))\n",
+        "  calc(a, b, op)\n",
+        "  print(f'o resultado é {calc(a, b, op)}')\n",
+        "  n = int(input('se desejar parar, digite [0] para continuar digite [1]'))"
+      ]
+    }
+  ]
+}
